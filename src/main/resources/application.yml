@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: spring-ai-chat
+  ai:
+    ollama:
+      chat:
+        options:
+          model: llama3.2:latest
+    openai:
+      api-key: sk-proj-Sc-xxxxxxxxx
+    anthropic:
+      api-key: xyz # to get a proper key, create an account in anthropic (Claude) and create an api-key.
