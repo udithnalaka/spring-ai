@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Flux;
 
 
 @RestController
@@ -29,5 +30,14 @@ public class OllamaChatController {
         String response = ollamaService.getAnswer(message);
 
         return ResponseEntity.ok("Answer: " + response);
+    }
+
+    @RequestMapping("/stream")
+    public Flux<String> getSuggestions() {
+
+        String message = "I'm visiting Japan. can you tell me 2 places to visit in Japan?";
+        log.info("get suggestion using async call for message: {}.", message);
+
+        return ollamaService.getSuggestions(message);
     }
 }
