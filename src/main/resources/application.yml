@@ -7,6 +7,6 @@ spring:
         options:
           model: llama3.2:latest
     openai:
-      api-key: sk-proj-Sc-xxxxxxxxx
+      api-key: ${OPENAI_API_KEY}
     anthropic:
       api-key: xyz # to get a proper key, create an account in anthropic (Claude) and create an api-key.

@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Flux;
 
 @RestController
 @RequestMapping("/api/v1/openai")
@@ -23,4 +24,13 @@ public class OpenAIChatController {
 
         return ResponseEntity.ok("Answer: " + response);
     }
+
+    @RequestMapping("/stream")
+    public Flux<String> getSuggestions() { // using ChatClient stream (asynchronous requests)
+
+        String message = "I'm visiting Australia. can you tell me 2 places to visit?";
+
+        return openAIService.getSuggestions(message);
+    }
+
 }
