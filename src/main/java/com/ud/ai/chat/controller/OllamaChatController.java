@@ -33,7 +33,7 @@ public class OllamaChatController {
     }
 
     @RequestMapping("/stream")
-    public Flux<String> getSuggestions() {
+    public Flux<String> getSuggestions() { // using ChatClient stream (asynchronous requests)
 
         String message = "I'm visiting Japan. can you tell me 2 places to visit in Japan?";
         log.info("get suggestion using async call for message: {}.", message);
