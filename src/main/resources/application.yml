@@ -8,5 +8,8 @@ spring:
           model: llama3.2:latest
     openai:
       api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4.1-mini
     anthropic:
       api-key: xyz # to get a proper key, create an account in anthropic (Claude) and create an api-key.
