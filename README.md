@@ -81,6 +81,21 @@ below are the steps used to integrate Ollama with this Spring boot AI applicatio
 
 **Note**: Anthropic (Claude) and OpenAI (ChatGPT) are paid LLM agents and will not give a response if no proper api-key and credits available.
 
+### OpenAI (https://platform.openai.com/)
+
+Paid LLM that can be used to get accurate answers. ChatGPT is one of OpenAI's AI tool.
+
+* below is a system instruction provided to create a blog post.
+  
+   The LLM goes through these instructions when generating the answer.
+
+
+   ![img_2.png](img_2.png)
+
+* Below is the response given by OpenAI LLM for the above.
+
+
+  ![img_3.png](img_3.png)
 
 ### Troubleshooting 
 
