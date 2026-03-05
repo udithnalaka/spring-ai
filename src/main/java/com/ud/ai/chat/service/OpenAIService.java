@@ -1,5 +1,6 @@
 package com.ud.ai.chat.service;
 
+import com.ud.ai.chat.dto.Itinerary;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.ollama.OllamaChatModel;
 import org.springframework.ai.openai.OpenAiChatModel;
@@ -97,5 +98,13 @@ public class OpenAIService {
                 .system(systemInstruction)
                 .call()
                 .content();
+    }
+
+    public Itinerary vacationDetailsStructured() {
+
+        return chatClient.prompt()
+                .user("I want to plan a trip to Hawaii. Give me a list of things to do.")
+                .call()
+                .entity(Itinerary.class);
     }
 }
