@@ -63,33 +63,7 @@ public class OpenAIChatController {
     }
 
     /**
-     * To get a structured response (in JSON format) for a given request text.
-     *  <pre>
-     * Request: I want to plan a trip to Hawaii. Give me a list of things to do.
-     *
-     * Response:
-     *
-     *    {"itinerary":[
-     *       {
-     *          "activity":"Visit Waikiki Beach",
-     *          "location":"Oahu",
-     *          "day":"Monday",
-     *          "time":"09:00 AM"
-     *       },
-     *       {
-     *          "activity":"Hike Diamond Head",
-     *          "location":"Oahu",
-     *          "day":"Tuesday",
-     *          "time":"07:00 AM"
-     *       },
-     *       {
-     *          "activity":"Explore Pearl Harbor National Memorial",
-     *          "location":"Oahu",
-     *          "day":"Wednesday",
-     *          "time":"10:00 AM"
-     *       }
-     *       ]}
-     *    </pre>
+     * using ChatClient's entity() to structure the response according to the Object structure we want.
      */
     @GetMapping("/vacation/structured")
     public Itinerary vacationStructured() {
