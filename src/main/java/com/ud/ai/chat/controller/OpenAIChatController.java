@@ -1,5 +1,6 @@
 package com.ud.ai.chat.controller;
 
+import com.ud.ai.chat.dto.Itinerary;
 import com.ud.ai.chat.service.OpenAIService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -59,6 +60,15 @@ public class OpenAIChatController {
 
         return openAIService.createBlogPost(topic);
 
+    }
+
+    /**
+     * using ChatClient's entity() to structure the response according to the Object structure we want.
+     */
+    @GetMapping("/vacation/structured")
+    public Itinerary vacationStructured() {
+
+        return openAIService.vacationDetailsStructured();
     }
 
 }

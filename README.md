@@ -81,23 +81,7 @@ below are the steps used to integrate Ollama with this Spring boot AI applicatio
 
 **Note**: Anthropic (Claude) and OpenAI (ChatGPT) are paid LLM agents and will not give a response if no proper api-key and credits available.
 
-### OpenAI (https://platform.openai.com/)
-
-Paid LLM that can be used to get accurate answers. ChatGPT is one of OpenAI's AI tool.
-
-* below is a system instruction provided to create a blog post.
-  
-   The LLM goes through these instructions when generating the answer.
-
-
-   ![img_2.png](img_2.png)
-
-* Below is the response given by OpenAI LLM for the above.
-
-
-  ![img_3.png](img_3.png)
-
-### Troubleshooting 
+### Troubleshooting
 
 * If the api-key is not properly configured to an AI model
 
@@ -121,3 +105,52 @@ Paid LLM that can be used to get accurate answers. ChatGPT is one of OpenAI's AI
           "code": "insufficient_quota"
         }
       }
+
+
+### OpenAI (https://platform.openai.com/)
+
+Paid LLM that can be used to get accurate answers. ChatGPT is one of OpenAI's AI tool.
+
+#### Scenarios implemented
+
+1) system instruction provided to create a blog post.
+
+       Controller method:
+       public String blogPost(@RequestParam(value = "topic", defaultValue = "JDK Virtual Threads") String topic)
+  
+   The LLM goes through these instructions when generating the answer.
+
+
+   ![img_2.png](img_2.png)
+
+   Response given by OpenAI LLM for the above.
+
+
+  ![img_3.png](img_3.png)
+
+
+2) Read details from a image provided and return a text describing the image
+
+       Controller method:
+       @GetMapping("/read")
+       public String describeImage()
+
+    Response:
+ 
+       The image shows a scenic landscape with a large pyramid-like structure in the center,
+       surrounded by greenery and trees. There are several colorful hot air balloons floating in the sky above the pyramid.
+       In the background, there are hills or mountains under a clear blue sky. The lighting suggests it might be early morning or late afternoon,
+       casting a warm glow over the scene. The overall atmosphere is peaceful and picturesque.
+
+
+3) Generate an image according to the ImageOptions provided
+
+       Controller method:
+       @GetMapping("/generate")
+       public ResponseEntity<Map<String, String>> generateImage(
+       @RequestParam(defaultValue = "a beautiful sunset over the ocean") String prompt)
+
+   Response:
+
+   ![img_4.png](img_4.png)
+
