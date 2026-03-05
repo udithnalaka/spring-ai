@@ -135,6 +135,8 @@ Paid LLM that can be used to get accurate answers. ChatGPT is one of OpenAI's AI
        @GetMapping("/read")
        public String describeImage()
 
+![img_5.png](img_5.png)
+
     Response:
  
        The image shows a scenic landscape with a large pyramid-like structure in the center,
@@ -150,7 +152,9 @@ Paid LLM that can be used to get accurate answers. ChatGPT is one of OpenAI's AI
        public ResponseEntity<Map<String, String>> generateImage(
        @RequestParam(defaultValue = "a beautiful sunset over the ocean") String prompt)
 
+![img_6.png](img_6.png)
+
    Response:
 
-   ![img_4.png](img_4.png)
+![img_4.png](img_4.png)
 
