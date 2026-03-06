@@ -27,7 +27,7 @@ public class OpenAIImageGenerationService {
                 .width(1024)
                 .height(1024)
                 .quality("hd")
-                .style("vivid")
+                .style("vivid") //"natural"
                 .build();
 
         var imagePrompt = new ImagePrompt(prompt, options);
