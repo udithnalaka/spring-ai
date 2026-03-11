@@ -209,6 +209,11 @@ RAG is a technique that combines a knowledge base (specific to your business) wi
 
  **Example** 
 
+    * Class files to refer
+      RagConfiguration
+      OpenAIVectorRAGController
+      OpenAIVectorRAGService
+
 * provide the context (refer models.json in resources). This is where the domain specific content is initially loaded.
   The models.json file contains the details of several LLM models by different companies (OpenAI, Google, Anthropic, Meta AI, etc.)
 
