@@ -5,6 +5,23 @@
 * Springboot 3.5
 * Spring AI (v 1.1.2)
 
+### AI Functions implemented
+Ollama LLM (running locally)
+* running Ollama LLM locally to do simple message queries.
+
+OpenAI LLM
+* simple text search.
+* ChatClient stream (asynchronous requests) and returning a Flux response.
+* chatClient's system() property to instruct the LLM to filter the question only for banking purposes.
+* ChatClient's system() property to instruct the LLM to create a blog post as instructed.
+* ChatClient's entity() to structure the response according to the Object structure we want.
+* ChatClient's advisor() to keep the chat messages in memory using ChatMemory interface.
+* OpenAiAudioSpeechModel to convert text to speech.
+* ChatClient's user.media() to send an image to the LLM to read the image and describe the image.
+* OpenAiImageModel to generate an image according to the ImageOptions provided.
+* RAG (Retrieval-Augmented Generation). VectorStore and ChatClient's QuestionAnswerAdvisor() to respond based on the context in VectorStore.
+* ChatClient's tool() to respond based on known information like current date and time.
+
 ### Simple chat application using the following AI models
 
 * Anthropic - Claude (paid LLM)

@@ -18,6 +18,10 @@ public class OpenAIVectorRAGController {
     }
 
 
+    /**
+     * RAG (Retrieval-Augmented Generation) example
+     * using VectorStore and ChatClient's QuestionAnswerAdvisor() to response based on the context in VectorStore.
+     */
     @GetMapping("/models")
     public Models faq(@RequestParam(value = "message",
             defaultValue = "Give me a list of all the models from OpenAI along with their context window.") String message) {
