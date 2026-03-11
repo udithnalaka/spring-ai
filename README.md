@@ -187,3 +187,41 @@ Paid LLM that can be used to get accurate answers. ChatGPT is one of OpenAI's AI
 ![img_9.png](img_9.png)
    
 ![img_10.png](img_10.png)
+
+
+6) RAG (Retrieval-Augmented Generation)
+
+RAG is a technique that combines a knowledge base (specific to your business) with an AI language model (e.g. Open AI) to generate accurate, context-aware responses grounded in your own data rather than just the model's training data.
+
+**How it Works**
+
+    User asks a Question
+          ↓
+    [Embedding Model] → converts question to a vector
+          ↓
+    [Vector Database] → finds the most similar/relevant documents
+          ↓
+    [Retrieved Context + Original Question]
+          ↓
+    [LLM] → generates answer based on retrieved context
+          ↓
+    Accurate, Grounded Response
+
+ **Example** 
+
+* provide the context (refer models.json in resources). This is where the domain specific content is initially loaded.
+  The models.json file contains the details of several LLM models by different companies (OpenAI, Google, Anthropic, Meta AI, etc.)
+
+* When the application starts up, a SimpleVectorStore object is created with the models.json content and stored in-memory vector store.
+  (refer vectorstore.json)
+
+* User asks the question (in OpenAIVectorRAGController):
+
+      Give me a list of all the models from OpenAI along with their context window.
+
+* OpenAI model responses with the vector store context and the users question.
+  only OpenAI related information is presented according to the users question.
+
+  ![img_11.png](img_11.png)
+
+
