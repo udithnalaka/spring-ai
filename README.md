@@ -21,6 +21,8 @@ OpenAI LLM
 * OpenAiImageModel to generate an image according to the ImageOptions provided.
 * RAG (Retrieval-Augmented Generation). VectorStore and ChatClient's QuestionAnswerAdvisor() to respond based on the context in VectorStore.
 * ChatClient's tool() to respond based on known information like current date and time.
+* Instruct to take Actions based on the Tool description provided to manage Tasks. 
+* MCP (Model Context Protocol) - task in progress.
 
 ### Simple chat application using the following AI models
 
