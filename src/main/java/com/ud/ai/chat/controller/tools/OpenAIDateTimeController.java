@@ -1,4 +1,4 @@
-package com.ud.ai.chat.controller;
+package com.ud.ai.chat.controller.tools;
 
 import com.ud.ai.chat.service.OpenAIDateTimeToolService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +18,7 @@ public class OpenAIDateTimeController {
 
     /**
      * using ChatClient's tool() to response based on known information like date and time, weather.
-     * e.g: DateTomeTool will inform the current date and time. based on that the LLM will pick tomorrow's date.
+     * e.g: DateTimeTool will inform the current date and time. based on that the LLM will pick tomorrow's date.
      */
     @GetMapping("/date-time")
     public String getDateTime() {

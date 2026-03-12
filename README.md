@@ -247,3 +247,25 @@ RAG is a technique that combines a knowledge base (specific to your business) wi
   ![img_11.png](img_11.png)
 
 
+7) Tooling - provide a Tool description for the LLM to function with custom data to take an Action.
+
+
+**Example** - Task creation and updating
+
+    * Class files to refer
+      TaskManagementController
+      TaskManagementService
+      TaskManagementTool - logic for the LLM to refer when generating the response.
+
+* create a Task
+![img_14.png](img_14.png)
+
+* update the Task's assignee
+   * when the taskID is not provided
+  ![img_13.png](img_13.png)
+
+   * update assignee for the given taskID
+    ![img_15.png](img_15.png)
+
+
+

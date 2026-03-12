@@ -1,4 +1,4 @@
-package com.ud.ai.chat.controller;
+package com.ud.ai.chat.controller.rag;
 
 import com.ud.ai.chat.dto.rag.Models;
 import com.ud.ai.chat.service.OpenAIVectorRAGService;
